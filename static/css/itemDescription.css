@@ -1,0 +1,49 @@
+#display {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+#itemImage {
+	width: auto;
+	height: auto;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	display: inline-block;
+}
+
+#itemDescription {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+	font-size: 19px;
+}
+
+#descriptionTable td {
+	width: 150px;
+}
+
+#addToCart {
+	width: 200px;
+	height: 30px;
+	font-size: 20px;
+	background-color: rgb(160, 160, 160);
+	border-radius: 8px;
+	margin-top: 50px;
+}
+
+#aText {
+	text-decoration: none;
+	color: rgb(30, 30, 30);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#itemName {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}

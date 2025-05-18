@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href={{ url_for(
+    'static', filename='css/index.css') }} />
+    <link rel="stylesheet" href={{ url_for(
+    'static', filename='css/styles.css') }} />
+</head>
+<body>
+<div id="title">
+    <a href="/">
+        <img id="logo" src={{ url_for('static', filename='images/logo.png') }} />
+    </a>
+    <form>
+        <input id="searchBox" type="text" name="searchQuery" placeholder="...">
+        <input id="searchButton" type="submit" value="Найти...">
+    </form>
+    <div id="cart">
+        <a class="link" href="/cart">
+            <img src={{url_for('static', filename='images/shoppingCart.png' )}} id="cartIcon"/>
+        </a>
+    </div>
+</div>
+<div class="display">
+    <div>
+        {% for data in itemData %}
+        <table>
+            <tr id="itemName">
+                {% for row in data %}
+                <td>
+                    {{row[1]}}
+                </td>
+                {% endfor %}
+            </tr>
+            <tr id="itemImage">
+                {% for row in data %}
+                <td>
+                    <a href="/itemDescription?itemId={{row[0]}}">
+                        <img src={{ url_for('static', filename='img/' + row[4]) }} id="itemImage" />
+                    </a>
+                </td>
+                {% endfor %}
+            </tr>
+            <tr id="itemPrice">
+                {% for row in data %}
+                <td>
+                    {{row[2]}} руб.
+                </td>
+                {% endfor %}
+            </tr>
+        </table>
+        {% endfor %}
+    </div>
+</div>
+<footer class="footer">
+    <h4 class="text">Контактная информация: </h4>
+    <h5 class="text">Телефон: +7(812)123-45-67</h5>
+    <h5 class="text">Эл. почта: example@gmail.com</h5>
+    <hr>
+    <h5 class="text1">© 2025–2025 Компания Online-Shop</h5>
+</footer>
+</body>
+</html>
+

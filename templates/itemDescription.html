@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{{data[1]}}</title>
+    <link rel="stylesheet" href={{url_for('static', filename='css/itemDescription.css' )}}/>
+    <link rel="stylesheet" href={{ url_for(
+    'static', filename='css/styles.css')}} />
+</head>
+<body>
+<div id="title">
+    <a href="/">
+        <img id="logo" src={{ url_for('static', filename='images/logo.png') }} />
+    </a>
+    <form>
+        <input id="searchBox" type="text" name="searchQuery" placeholder="...">
+        <input id="searchButton" type="submit" value="Найти...">
+    </form>
+    <div id="cart">
+        <a class="link" href="/cart">
+            <img src={{url_for('static', filename='images/shoppingCart.png' )}} id="cartIcon"/>
+        </a>
+    </div>
+</div>
+<div id="display">
+    <div id="itemName">
+        <h2>{{data[1]}}</h2>
+    </div>
+    <div>
+        <img src={{url_for('static', filename='img/' +data[4]) }} id="itemImage"/>
+    </div>
+    <div id="itemDescription">
+        <h2>Описание</h2>
+        <table id="descriptionTable">
+            <tr>
+                <td>Название:</td>
+                <td>{{data[1]}}</td>
+            </tr>
+            <tr>
+                <td>Характеристики:</td>
+                <td>{{data[2]}}</td>
+            </tr>
+            <tr>
+                <td>Цена:</td>
+                <td>{{data[3]}} руб.</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <button id="addToCart" type="button">
+        <a href="/addToCart?itemId={{request.args.get('itemId')}}" id="aText">Добавить в корзину</a>
+    </button>
+</div>
+<footer>
+    <h4 class="text">Контактная информация: </h4>
+    <h5 class="text">Телефон: +7(812)123-45-67</h5>
+    <h5 class="text">Эл. почта: example@gmail.com</h5>
+    <hr>
+    <h5 class="text1">© 2025–2025 Компания Online-Shop</h5>
+</footer>
+</body>
+</html>
+

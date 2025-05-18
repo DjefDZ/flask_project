@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Корзина</title>
+    <link rel="stylesheet" href={{url_for('static', filename='css/cart.css' )}}/>
+    <link rel="stylesheet" href={{url_for('static', filename='css/styles.css' ) }}/>
+</head>
+<body>
+<div id="title">
+    <a href="/">
+        <img id="logo" src={{ url_for('static', filename='images/logo.png') }} />
+    </a>
+    <form>
+        <input id="searchBox" type="text" name="searchQuery" placeholder="...">
+        <input id="searchButton" type="submit" value="Найти...">
+    </form>
+    <div id="cart">
+        <a class="link" href="/cart">
+            <img src={{url_for('static', filename='images/shoppingCart.png' )}} id="cartIcon"/>
+        </a>
+    </div>
+</div>
+<div id="cartItems">
+    <div id="tableItems">
+        {% for row in items %}
+        <div>
+            <hr>
+            <div id="itemImage">
+                <img src={{url_for('static', filename='img/' +row[4])}} id="image"/>
+            </div>
+            <div id="itemName">
+                <span id="itemNameTag">{{row[1]}}</span><br>
+                <button id="removeBtn" type="button">
+                    <a href="/removeFromCart?itemId={{row[0]}}" id="removeA">Убрать из корзины</a>
+                </button>
+            </div>
+            <div id="itemPrice">
+                {{row[2]}} руб.
+            </div>
+        </div>
+        {% endfor %}
+        <hr>
+        <div id="total">
+            <span id="total1">Стоимость:</span> {{totalPrice}} руб.
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <h4 class="text">Контактная информация: </h4>
+    <h5 class="text">Телефон: +7(812)123-45-67</h5>
+    <h5 class="text">Эл. почта: example@gmail.com</h5>
+    <hr>
+    <h5 class="text1">© 2025–2025 Компания Online-Shop</h5>
+</footer>
+</body>
+</html>
+

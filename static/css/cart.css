@@ -1,0 +1,83 @@
+#tableItems {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#itemImage {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	float: left;
+}
+
+#itemName {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 100px;
+	width: 200px;
+	float: left;
+}
+
+#titleName {
+	width: 200px;
+	float: left;
+}
+
+#titlePrice {
+	float: left;
+}
+
+#itemPrice {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 100px;
+	display: inline-block;
+}
+
+#image {
+	height: 100px;
+	width: 80px;
+}
+
+#total {
+	padding-left: 280px;
+}
+
+#itemNameTag {
+	font-weight: bold;
+}
+
+#total1 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#cartItems {
+	margin-left: 30px;
+}
+
+hr {
+	width: 400px;
+	margin-left: 0;
+}
+
+#removeBtn {
+	width: 140px;
+	height: 25px;
+	margin-top: 15px;
+	background-color: rgb(160, 160, 160);
+	border-radius: 8px;
+}
+
+#removeA {
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: rgb(30, 30, 30)
+}
